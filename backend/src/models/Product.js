@@ -1,0 +1,1 @@
+imageUrl: { type: String }

@@ -1,10 +1,13 @@
+/* Make the app take the full viewport width/height */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* IMPORTANT: dashboard needs left alignment */
 }
 
+/* Optional: keep these utility styles if you still use them somewhere */
 .logo {
   height: 6em;
   padding: 1.5em;

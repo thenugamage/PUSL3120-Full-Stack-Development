@@ -1,15 +1,16 @@
-require('dotenv').config();
-const app = require('./app');
-const connectDB = require('./config/db');
+require("dotenv").config();
+const app = require("./app");
+const connectDB = require("./config/db");
 
 const PORT = process.env.PORT || 5000;
 
-const startServer = async () => {
-    await connectDB();
-
+connectDB()
+  .then(() => {
     app.listen(PORT, () => {
-        console.log(`Backend server running on port ${PORT}`);
+      console.log(`Backend server running on port ${PORT}`);
     });
-};
-
-startServer();
+  })
+  .catch((err) => {
+    console.error("MongoDB connection error:", err.message);
+    process.exit(1);
+  });

@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import AdminLayout from "./admin/layout/adminlayout";
+import ProtectedLayout from "./admin/layout/protectedlayout";
 
+import Dashboard from "./admin/pages/dashboard";
+import ProductList from "./admin/pages/products/productlist";
+import ProductForm from "./admin/pages/products/productform";
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        {/* Public route so redirects don’t go to “nothing” */}
+        <Route path="/" element={<div style={{ padding: 20 }}>Home</div>} />
 
-export default App
+        {/* Admin */}
+        <Route element={<ProtectedLayout />}>
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="products" element={<ProductList />} />
+            <Route path="products/new" element={<ProductForm mode="create" />} />
+            <Route path="products/:id/edit" element={<ProductForm mode="edit" />} />
+          </Route>
+        </Route>
+
+        {/* Fallback */}
+        <Route path="*" element={<div style={{ padding: 20 }}>Not Found</div>} />
+      </Routes>
+    </BrowserRouter>
+  );
+}

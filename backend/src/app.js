@@ -37,7 +37,13 @@ app.get("/health", (req, res) => {
   res.json({ ok: true });
 });
 
+
 // product routes
 app.use("/api/products", productRoutes);
+
+const testRoutes = require('./routes/testRoutes');
+app.use('/api/test', testRoutes);
+
+
 
 module.exports = app;

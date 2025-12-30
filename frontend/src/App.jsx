@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AdminLayout from "./admin/layout/adminlayout";
@@ -28,5 +29,6 @@ export default function App() {
         <Route path="*" element={<div style={{ padding: 20 }}>Not Found</div>} />
       </Routes>
     </BrowserRouter>
+
   );
 }

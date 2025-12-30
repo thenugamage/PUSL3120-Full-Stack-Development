@@ -1,0 +1,290 @@
+.pf {
+  padding: 14px 10px 22px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111827;
+}
+
+/* Top pill bar */
+.pfTopBar {
+  width: 100%;
+  max-width: 1400px;
+  background: rgba(252, 231, 227, 0.85);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0 18px;
+}
+
+.pfTopLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pfBackBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.pfBackIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.pfTopTitle {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.pfTopSub {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.pfTopActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.pfBtn {
+  height: 30px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 0 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.pfBtn--ghost {
+  background: rgba(255, 255, 255, 0.55);
+  color: #111827;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.pfBtn--save {
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 10px 18px rgba(239, 68, 68, 0.25);
+}
+
+/* grid */
+.pfGrid {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 22px;
+  max-width: 1400px;
+}
+
+.pfRight {
+  display: grid;
+  gap: 18px;
+}
+
+/* cards */
+.pfCard {
+  background: rgba(252, 231, 227, 0.85);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.pfCard--warm {
+  background: rgba(249, 206, 190, 0.45);
+}
+
+.pfCardTitle {
+  font-size: 11px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* ✅ More space between a textbox and the next heading below it
+   Apply ONLY to direct .pfField children (not the ones inside rows) */
+.pfCard > .pfField {
+  margin-top: 16px; /* increased vertical separation between sections */
+}
+.pfCard > .pfField:first-of-type {
+  margin-top: 0;
+}
+
+/* upload box */
+.pfDrop {
+  border-radius: 10px;
+  border: 2px solid rgba(239, 68, 68, 0.6);
+  background: rgba(255, 235, 230, 0.7);
+  padding: 18px 12px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.pfDrop--over {
+  outline: 3px solid rgba(239, 68, 68, 0.22);
+}
+
+.pfUploadIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.pfDropText {
+  text-align: center;
+}
+
+.pfDropMain {
+  font-size: 11px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.pfDropSub {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* hint card */
+.pfHint {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.pfHintTitle {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.pfHintSub {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.pfThumbs {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.pfThumb {
+  font-size: 10px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(249, 206, 190, 0.35);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* form fields */
+.pfField {
+  display: grid;
+  gap: 10px; /* label to input gap */
+}
+
+.pfLabel {
+  font-size: 10px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.pfInput,
+.pfTextarea {
+  border-radius: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.55);
+  background: rgba(255, 235, 230, 0.7);
+  padding: 9px 10px;
+  font-size: 11px;
+  outline: none;
+}
+
+.pfTextarea {
+  height: 78px;
+  resize: none;
+}
+
+.pfHelper {
+  font-size: 9px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* rows */
+.pfRow2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 22px; /* ✅ more space: Product Name textbox -> Barcode/Brand headings */
+}
+
+.pfRow3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* ✅ FIX: $ sign alignment (keep it centered vertically with the input) */
+.pfMoney {
+  position: relative;
+  width: 100%;
+}
+
+.pfMoney span {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); /* keeps $ vertically centered */
+  font-size: 11px;
+  font-weight: 900;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.pfInput--money {
+  width: 100%;
+  padding-left: 24px; /* space for $ */
+}
+
+/* shipping row */
+.pfRowShip {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.pfDims {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.7fr;
+  gap: 10px;
+}
+
+/* responsive */
+@media (max-width: 1050px) {
+  .pfTopBar,
+  .pfGrid {
+    max-width: 100%;
+  }
+  .pfGrid {
+    grid-template-columns: 1fr;
+  }
+}

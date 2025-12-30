@@ -1,0 +1,48 @@
+/* Base reset + make app full screen */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Keep your preferred font stack */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* IMPORTANT: body must NOT be flex-centered */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111827;
+}
+
+/* Links (safe defaults) */
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons: don’t globally style all buttons
+   (your admin UI has custom buttons) */
+button {
+  font-family: inherit;
+}

@@ -1,0 +1,337 @@
+/* overall page spacing matches screenshot */
+.adash {
+  padding: 10px 6px 18px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* Header */
+.adash__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 6px 0 14px;
+}
+
+.adash__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.adash__subtitle {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Stats */
+.adash__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.adash__statCard {
+  background: #fce6e3;
+  border-radius: 12px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.adash__statTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.adash__statIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.adash__statIcon--blue { background: #2f7af8; }
+.adash__statIcon--green { background: #16a34a; }
+.adash__statIcon--purple { background: #a855f7; }
+.adash__statIcon--orange { background: #f97316; }
+
+.adash__delta {
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.adash__statLabel {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.adash__statValue {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Quick Actions */
+.adash__sectionLabel {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 8px 0 10px;
+  color: #111827;
+}
+
+.adash__actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.adash__actionCard {
+  background: #fce6e3;
+  border-radius: 12px;
+  padding: 18px 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+}
+
+.adash__actionCard:active {
+  transform: translateY(1px);
+}
+
+.adash__actionIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+
+.adash__actionText {
+  font-size: 11px;
+  color: #111827;
+}
+
+/* Bottom area */
+.adash__bottom {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.adash__panel {
+  background: #fce6e3;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.adash__panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px 10px;
+}
+
+.adash__panelTitle {
+  font-size: 12px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.adash__panelTitle--warn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adash__warnIcon {
+  font-size: 13px;
+}
+
+.adash__link {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Recent Orders list */
+.adash__ordersList {
+  display: grid;
+  gap: 10px;
+}
+
+.adash__orderRow {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.adash__orderLeft { min-width: 0; }
+
+.adash__orderId {
+  font-size: 11px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.adash__orderName {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.adash__orderTime {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.adash__orderRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+}
+
+.adash__orderAmount {
+  font-size: 11px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Status badges */
+.adash__badge {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.adash__badge--pending {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.adash__badge--processing {
+  background: #fde68a;
+  color: #92400e;
+}
+
+.adash__badge--shipped {
+  background: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.adash__badge--delivered {
+  background: #bbf7d0;
+  color: #15803d;
+}
+
+/* Low Stock */
+.adash__stockList {
+  display: grid;
+  gap: 10px;
+}
+
+.adash__stockRow {
+  background: #fff3ea;
+  border-radius: 10px;
+  padding: 12px 12px;
+}
+
+.adash__stockTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.adash__stockLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.adash__stockEmoji {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.adash__stockName {
+  font-size: 11px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.adash__stockMin {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.adash__stockRight {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ff5a1f;
+  white-space: nowrap;
+}
+
+.adash__bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: #fff7ed;
+  overflow: hidden;
+}
+
+.adash__barFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #ff6900;
+}
+
+/* Manage Inventory link */
+.adash__manage {
+  width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 0 2px;
+}
+
+/* Responsiveness (keeps layout sane if screen shrinks) */
+@media (max-width: 1100px) {
+  .adash__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adash__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adash__bottom { grid-template-columns: 1fr; }
+}

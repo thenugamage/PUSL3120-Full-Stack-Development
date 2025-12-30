@@ -1,0 +1,44 @@
+/* Full page shell (sidebar + content) */
+.adminShell {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  gap: 22px;
+
+  /* outer spacing like the UI */
+  padding: 18px;
+
+  /* soft peach gradient background */
+  background: linear-gradient(135deg, #fff7f5 0%, #fde7e2 55%, #f8d9d0 100%);
+
+  /* important: allow the main area to shrink/grow correctly */
+  align-items: stretch;
+
+  /* prevent horizontal overflow */
+  overflow-x: hidden;
+}
+
+/* Right side area where pages render */
+.adminMain {
+  flex: 1;
+  min-width: 0;          /* IMPORTANT for flex layouts */
+  width: 100%;
+  padding: 0;            /* let pages control their own padding */
+}
+
+/* Optional: if you ever want the content centered with a max width,
+   keep this OFF for now to match the screenshot exactly. */
+/*
+.adminMainInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+*/
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .adminShell {
+    gap: 14px;
+    padding: 14px;
+  }
+}

@@ -12,4 +12,8 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Sudu Araliya backend is running' });
 });
 
+const testRoutes = require('./routes/testRoutes');
+app.use('/api/test', testRoutes);
+
+
 module.exports = app;
